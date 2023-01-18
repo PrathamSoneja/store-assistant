@@ -13,7 +13,7 @@ The application uses the Hugging Face's transformers library to fine-tune the mo
 
 1. Clone the repository:
 
-    git clone https://github.com/<username>/store-assistant.git
+    git clone https://github.com/PrathamSoneja/store-assistant.git
 
 2. Install the required packages:
 
