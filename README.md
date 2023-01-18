@@ -29,7 +29,11 @@ The application uses the Hugging Face's transformers library to fine-tune the mo
 
 1. This software has only a database of 5 products inits database. The information of these products is called from a personalized API. You can check that out at https://540zfa.deta.dev/docs
 
-2. The accuracy of answers highly depends upon the detailing mentioned in the product description.
+2. The accuracy of answers highly depends upon the detailing mentioned in the product description in the database.
+
+## Future Prospects
+
+Looking forward on integrating large LLM models like ChatGpt once their official api is released.
 
 ## Contributions
 
