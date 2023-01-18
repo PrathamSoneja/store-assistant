@@ -25,6 +25,12 @@ The application uses the Hugging Face's transformers library to fine-tune the mo
 
 4. Scan the QR code located near the product and ask questions using the interface provided.
 
+## Limitations
+
+1. This software has only a database of 5 products inits database. The information of these products is called from a personalized API. You can check that out at https://540zfa.deta.dev/docs
+
+2. The accuracy of answers highly depends upon the detailing mentioned in the product description.
+
 ## Contributions
 
 Pull requests and suggestions for improvement are welcome.
