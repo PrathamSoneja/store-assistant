@@ -1,46 +1,43 @@
 # Store Assistant
 
-Store Assistant is an application that helps customers understand products without the need for a sales representative. It uses the BERT-large-uncased-whole-word-masking-finetuned-SQUAD model to answer customer questions.
+Store Assistant is an application that helps customers understand products without the need for a sales representative. It uses the GPT-3 text-davinci-003 model to answer customer questions.
 ## How it works
 
 Customers can scan a QR code located near a product and receive information about the product. If they have any questions, they can ask the Store Assistant and receive an accurate and detailed answer.
 ## Technical details
 
-The application is built using the BERT-large-uncased-whole-word-masking-finetuned-SQUAD model, which is a pre-trained transformer-based model that has been fine-tuned on the SQuAD dataset for question answering tasks.
-The application uses the Hugging Face's transformers library to fine-tune the model and generate answers.
+The application uses a customized api to fetch data of the product from an SQLite database.
 
-## Installation
+The application is built using the GPT-3 Davinci model, which is a powerful language generation model developed by OpenAI.
 
-1. Clone the repository:
+The application uses the OpenAI's API to fine-tune the model and generate answers.
 
-    git clone https://github.com/PrathamSoneja/store-assistant.git
-
-2. Install the required packages:
-
-    pip install -r requirements.txt
-
-3. Run the application:
-
-    python app.py
+The consumer can scan the QR code from any application like Google Lens, Gpay, Paytm, etc.
     
-## Usage
+## Installation and usage
 
-1. Scan the QR code located near the product and ask questions using the interface provided.
+Add product details in the database using Postman. 
+    
+    The API endpoint for POST method is https://540zfa.deta.dev/item/
+    
+    Checkout API documentation at https://540zfa.deta.dev/docs
+    
+Generate a QR code for the product by embedding this link "https://prathamsoneja-store-assistant-app-p5vz0t.streamlit.app/?item_id={id}". 
 
-2. To design a QR code for a specific product, make sure to add details of the product in database api "https://540zfa.deta.dev/", then
+    Replace the id with product id.
 
-3. Add item id parameter in the given url like "https://prathamsoneja-store-assistant-app-p5vz0t.streamlit.app/?item_id={id}" where id is product id.
+    Scan the QR code located near the product and ask questions using the interface provided.
 
 ## Limitations
 
-1. This software has only a database of 5 products inits database. The information of these products is called from a personalized API. You can check that out at https://540zfa.deta.dev/docs
+The model is only as good as the description of the product, so it may not be able to answer all questions accurately.
+The model is only able to answer questions in English.
+The GPT-3 model has certain usage limits and cost associated with it.
 
-2. The accuracy of answers highly depends upon the detailing mentioned in the product description in the database.
+## Future work
 
-## Future Prospects
-
-Looking forward on integrating large LLM models like ChatGpt once their official api is released.
-
+Adding support for multiple languages.
+    
 ## Contributions
 
 Pull requests and suggestions for improvement are welcome.
@@ -48,3 +45,8 @@ Pull requests and suggestions for improvement are welcome.
 ## Licensing
 
 This project is licensed under the MIT License. See LICENSE for more information.
+
+## Note
+
+This application is just for demonstration purposes and the usage of GPT-3 model is subject to OpenAI's API terms of service.
+If you want to use the model in production, you may need to consider the cost and usage limits of the API.
