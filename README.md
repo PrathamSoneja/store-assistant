@@ -31,8 +31,11 @@ Generate a QR code for the product by embedding this link "https://prathamsoneja
 ## Limitations
 
 The WebUI is developed using streamlit so after a week of inactivity, the web app can go to sleep.
+
 The model is only as good as the description of the product, so it may not be able to answer all questions accurately.
+
 The model is only able to answer questions in English.
+
 The GPT-3 model has certain usage limits and cost associated with it.
 
 ## Future work
