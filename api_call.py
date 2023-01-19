@@ -1,12 +1,8 @@
 import requests
 import openai
-import json
 
-f = open('config.json')
-data = json.load(f)
-api_key = data['API_KEY']
+api_key = "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"
 openai.api_key = api_key
-f.close()
 
 def info_call(url):
     #url = f'https://540zfa.deta.dev/items/{id}'
