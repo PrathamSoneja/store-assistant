@@ -67,11 +67,13 @@ else:
     clicked = st.button('Submit')
 
     if clicked == True and question != '':
-        url_ = f'{url}{question}/'
-        res = ques_call(url_)
-        if not res.ok or float(res.json()['probability']) < 0.7:
-            response = 'I cannot answer this question at the moment. Please contact a sales supervisor for assistance.'
-            st.write(response)
-        else:
-            st.subheader('Answer')
-            st.write(res.json()['answer'])
+        res = gpt_call(item_desc, question)
+        st.write(res)
+        #url_ = f'{url}{question}/'
+        #res = ques_call(url_)
+        #if not res.ok or float(res.json()['probability']) < 0.7:
+        #    response = 'I cannot answer this question at the moment. Please contact a sales supervisor for assistance.'
+        #    st.write(response)
+        #else:
+        #    st.subheader('Answer')
+        #    st.write(res.json()['answer'])
