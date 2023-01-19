@@ -1,9 +1,6 @@
 import requests
 import openai
 
-api_key = "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"
-openai.api_key = api_key
-
 def info_call(url):
     #url = f'https://540zfa.deta.dev/items/{id}'
     headers = {'Accept': 'application/json'}
@@ -23,6 +20,8 @@ def ques_call(url):
     return response
 
 def gpt_call(desc, question):
+    api_key = "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"
+    openai.api_key = api_key
     start_sequence = "\nA:"
     restart_sequence = "\n\nQ: "
     init_prompt = "I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. If you ask me a question that is nonsense, trickery, or has no clear answer, I will respond with \"Unknown\"."
