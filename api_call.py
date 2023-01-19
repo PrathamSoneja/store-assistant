@@ -3,7 +3,8 @@ import openai
 
 with open('config.txt', 'r') as f:
     x = f.readlines()[1]
-api_key = x
+
+api_key = str(x)
 
 def info_call(url):
     #url = f'https://540zfa.deta.dev/items/{id}'
