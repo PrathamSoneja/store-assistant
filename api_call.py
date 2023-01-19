@@ -20,7 +20,7 @@ def ques_call(url):
     return response
 
 def gpt_call(desc, question):
-    api_key = "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"
+    api_key = "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"
     openai.api_key = api_key
     start_sequence = "\nA:"
     restart_sequence = "\n\nQ: "
