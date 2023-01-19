@@ -29,7 +29,7 @@ The application uses the Hugging Face's transformers library to fine-tune the mo
 
 2. To design a QR code for a specific product, make sure to add details of the product in database api "https://540zfa.deta.dev/", then
 
-3. Add item id parameter in the given url like "https://prathamsoneja-store-assistant-app-wu7yx7.streamlit.app/?item_id={id}" where id is product id.
+3. Add item id parameter in the given url like "https://prathamsoneja-store-assistant-app-p5vz0t.streamlit.app/?item_id={id}" where id is product id.
 
 ## Limitations
 
