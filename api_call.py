@@ -1,11 +1,6 @@
 import requests
 import openai
 
-with open('config.txt', 'r') as f:
-    x = f.readlines()[1]
-
-api_key = str(x)
-
 def info_call(url):
     #url = f'https://540zfa.deta.dev/items/{id}'
     headers = {'Accept': 'application/json'}
@@ -24,7 +19,7 @@ def ques_call(url):
     response = requests.get(url, headers=headers)
     return response
 
-def gpt_call(desc, question):
+def gpt_call(desc, question, api_key):
     openai.api_key = api_key
     start_sequence = "\nA:"
     restart_sequence = "\n\nQ: "

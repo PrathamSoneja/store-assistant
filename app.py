@@ -67,7 +67,7 @@ else:
     clicked = st.button('Submit')
 
     if clicked == True and question != '':
-        res = gpt_call(item_desc, question)
+        res = gpt_call(item_desc, question, st.secrets["openai_api_key"])
         st.write(res)
         #url_ = f'{url}{question}/'
         #res = ques_call(url_)
