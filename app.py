@@ -1,33 +1,6 @@
 import streamlit as st
 from api_call import *
 import base64
-import openai
-import json
-
-f = open('config.json')
-data = json.load(f)
-api_key = data['API_KEY']
-openai.api_key = api_key
-f.close()
-
-def gpt_call(desc, question):
-    start_sequence = "\nA:"
-    restart_sequence = "\n\nQ: "
-    init_prompt = "I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. If you ask me a question that is nonsense, trickery, or has no clear answer, I will respond with \"Unknown\"."
-    prompt = f"{init_prompt} {desc} {restart_sequence}{question} {start_sequence}"
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        temperature=0,
-        max_tokens=100,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0,
-        stop=["\n"]
-    )
-    message = response.choices[0].text
-    return message
-
 
 st.set_page_config(page_title="Product Information", page_icon=":mag:", layout="wide")
 img_urls = ['https://m.media-amazon.com/images/I/81KoSSAwH2L._SL1500_.jpg',
