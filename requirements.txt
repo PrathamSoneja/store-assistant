@@ -1,3 +1,4 @@
 requests
+json==2.0.9
 openai
 streamlit
